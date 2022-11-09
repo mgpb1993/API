@@ -1,0 +1,313 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body onload="startTime()">
+    
+
+<div class="welcome">
+    <h1>Bienvenidos a mi WebSite</h1>
+    <h3>Im Full Stack </h3>
+
+
+
+
+</div>
+<nav>
+
+    <style>
+        body {
+            background-color: #555;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mobile-container {
+            max-width: 100%;
+            margin: auto;
+
+
+            color: white;
+            border-radius: 10px;
+        }
+
+        .nav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+
+        .nav #myLinks {
+            display: none;
+        }
+
+        .nav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+
+        .nav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .nav a:hover {
+            background-color: rgb(10, 194, 255);
+            color: black;
+        }
+
+        .active {
+            background-color: rgb(10, 194, 255);
+            color: white;
+        }
+    </style>
+
+
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+
+        <!-- Top Navigation Menu -->
+        <div class="nav">
+            <ul>
+
+                <style>
+                    ul {
+                      list-style-type: none;
+                      margin: 0;
+                      padding: 0;
+                      overflow: hidden;
+                      background-color: #333;
+                    }
+                    
+                    li {
+                      float: left;
+                      border-right:1px solid #bbb;
+                    }
+                    
+                    li:last-child {
+                      border-right: none;
+                    }
+                    
+                    li a {
+                      display: block;
+                      color: white;
+                      text-align: center;
+                      padding: 14px 16px;
+                      text-decoration: none;
+                    }
+                    
+                    li a:hover:not(.active) {
+                      background-color: rgb(10, 194, 255)
+                    }
+                 
+                    </style>
+                    <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">Github</a></li>
+                <li><a href="#contact">Myblog</a></li>
+          
+              </ul>
+     
+            <div id="myLinks">
+                <a href="#news">Login</a>
+                <a href="#contact">Register</a>
+                <a href="#about">Donate</a>
+            </div>
+
+
+
+  
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+
+ 
+
+
+    
+</div>
+
+        </div>
+
+
+
+        <!-- End smartphone / tablet look -->
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+
+</nav>
+
+
+<style>
+     .welcome {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        color: rgb(10, 194, 255);
+    }
+</style>
+
+<style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 75%;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      background-color: white;
+    }
+    
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+    
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: rgb(10, 194, 255);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+    
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
+    </style>
+    </head>
+    <body>
+    
+ <br>
+    
+    <div class="card">
+      <img src="./img/Maxi.png" alt="Maxi" ">
+      <h1>Maximiliano Gabriel Pastore</h1>
+      <p class="title">Full stack and designer</p>
+      <p>Cuento con experiencia realizando webs utilizando el framework Nextjs, tengo conocimientos de HTML, CSS, JAVASCRIPT, NODEJS, REACT, MYSQL, PHP.</p>
+ 
+      <div style="margin: 24px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+    </div>
+
+
+
+    <div>
+<center>
+    <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pXNDpLF-gIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    </div>
+
+
+<div><script>
+
+
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    //Add a zero in front of numbers<10
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+
+
+
+    
+</script>
+<style>
+
+.clockdate-wrapper {
+    background-color: #333;
+    padding:25px;
+    max-width:350px;
+    width:100%;
+    text-align:center;
+    border-radius:5px;
+    margin:0 auto;
+ 
+}
+#clock{
+    background-color:#333;
+    font-family: sans-serif;
+    font-size:60px;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {
+    color:#888;
+    text-shadow:0px 0px 1px #333;
+    font-size:30px;
+    position:relative;
+    top:-27px;
+    left:-10px;
+}
+#date {
+    letter-spacing:10px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+</style>
+<br>
+<div id="clockdate" >
+    <div class="clockdate-wrapper">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
